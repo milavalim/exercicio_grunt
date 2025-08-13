@@ -87,7 +87,14 @@ module.exports = function(grunt) {
         },
         clean:[
             'prebuild'
-        ]
+        ],
+        uglify: {
+            target: {
+                files: {
+                    'dist/sripts/main.min.js': 'src/scripts/main.js'
+                }
+            }
+        }
     })
 
     grunt.loadNpmTasks('grunt-contrib-less');
@@ -95,8 +102,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['less:production', 'replace:dist', 'htmlmin:dist', 'clean']);
+    grunt.registerTask('build', ['less:production', 'replace:dist', 'htmlmin:dist', 'clean', 'uglify']);
 }
