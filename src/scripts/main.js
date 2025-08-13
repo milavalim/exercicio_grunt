@@ -9,5 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         numeroAleatorio = Math.round(numeroAleatorio + 1);
 
         document.getElementById('resultado-valor').innerHTML = numeroAleatorio;
+        document.querySelector('.resultado').style.display = 'block';
     })
 });
