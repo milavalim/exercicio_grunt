@@ -1,0 +1,50 @@
+@fontePrincipal: "Roboto", sans-serif;
+@fonteTitulo: "Lobster", sans-serif;
+@corTexto: white;
+@corFundo: rgb(255, 65, 96);
+@corBotao: yellow;
+
+body {
+    background-color: @corFundo;
+    font-family: @fontePrincipal;
+}
+
+h1{
+    font-family: @fonteTitulo;
+    text-align: center;
+    color: @corTexto;
+    font-weight: normal;
+    font-size: 2.2em;
+}
+
+main{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto; //centraliza horizontal
+    font-size: 2em;
+    text-align: center;
+}
+
+button{
+    padding: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 16px;
+    border-radius: 8px;
+    color: @corFundo;
+    background-color: @corBotao;
+    font-family: @fontePrincipal;
+}
+
+input{
+    display: block;
+    margin: 16px auto 0;
+    font-size: 2em;
+    max-width: 120px;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 6px solid white;
+}
